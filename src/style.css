@@ -3,6 +3,10 @@
     width: 500px;   
   }
 
+.hidden {
+    display: none;
+}
+
 nav a {
     margin: 0;
     color: darkblue;

@@ -9,7 +9,8 @@ const navbar = () => {
     const nav = document.createElement('nav');
     const a1 = document.createElement('a');
     const a2 = document.createElement('a');
-
+    a1.classList.add('home')
+    a2.classList.add('recipe')
     a1.innerText = "Home ";
     a2.innerText = " Recipe";
 
@@ -33,3 +34,12 @@ function homepage() {
 
 content.appendChild(navbar());
 content.appendChild(homepage());
+
+var recipe = document.getElementsByClassName('recipe');
+
+recipe.addEventListener('click', recipe)
+
+function recipe(){
+    // content.removeChild(homepage());
+    console.log("click");
+}
