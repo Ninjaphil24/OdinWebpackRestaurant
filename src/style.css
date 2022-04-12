@@ -1,0 +1,21 @@
+.home {
+    height: 240px;
+    width: 500px;   
+  }
+
+nav a {
+    margin: 0;
+    color: darkblue;
+}
+
+nav a:hover {
+    color:aqua;
+    font: bold;  
+    cursor: pointer;  
+}
+
+.home img {
+    margin: 30px;
+    height: 240px;
+      width: 415px
+  }
