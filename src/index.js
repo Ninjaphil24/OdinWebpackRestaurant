@@ -9,8 +9,8 @@ const navbar = () => {
     const nav = document.createElement('nav');
     const a1 = document.createElement('a');
     const a2 = document.createElement('a');
-    a1.classList.add('home')
-    a2.classList.add('recipe')
+    a1.setAttribute('id','home')
+    a2.setAttribute('id','recipe')
     a1.innerText = "Home ";
     a2.innerText = " Recipe";
 
@@ -24,6 +24,7 @@ function homepage() {
     
     
     element.classList.add('home');
+    element.setAttribute('id','homeid');
   
     const myIcon = new Image();
     myIcon.src = Icon2;
@@ -35,11 +36,12 @@ function homepage() {
 content.appendChild(navbar());
 content.appendChild(homepage());
 
-var recipe = document.getElementsByClassName('recipe');
+var recipe = document.getElementById('recipe');
+var homeid = document.getElementById('homeid');
 
-recipe.addEventListener('click', recipe)
 
-function recipe(){
-    // content.removeChild(homepage());
-    console.log("click");
+function recipeClick(){
+    homeid.classList.add('hidden')
+    console.log('Click')
 }
+recipe.addEventListener('click', recipeClick)
