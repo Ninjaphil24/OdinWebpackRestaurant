@@ -33,12 +33,34 @@ function homepage() {
     return element;
 }
 
+function recipepage() {
+    const element = document.createElement('div');
+    
+    
+    element.classList.add('recipe');
+    element.setAttribute('id','recipeid');
+  
+    const myIcon = new Image();
+    myIcon.src = Icon;
+
+    element.appendChild(myIcon);
+    return element;
+}
+
 content.appendChild(navbar());
 content.appendChild(homepage());
 
 
 var recipe = document.getElementById('recipe');
+var home = document.getElementById('home');
 
-let recipeClick = () => content.removeChild(content.children[1]);
 
-recipe.addEventListener('click', recipeClick)
+recipe.addEventListener('click', () => {
+    content.removeChild(content.children[1])
+    content.appendChild(recipepage())
+});
+
+home.addEventListener('click', () => {
+    content.removeChild(content.children[1])
+    content.appendChild(homepage())
+});
