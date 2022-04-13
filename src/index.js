@@ -36,12 +36,9 @@ function homepage() {
 content.appendChild(navbar());
 content.appendChild(homepage());
 
+
 var recipe = document.getElementById('recipe');
-var homeid = document.getElementById('homeid');
 
+let recipeClick = () => content.removeChild(content.children[1]);
 
-function recipeClick(){
-    homeid.classList.add('hidden')
-    console.log('Click')
-}
 recipe.addEventListener('click', recipeClick)
